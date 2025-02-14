@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6 p-5">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioLight" id="red-light" value="red"
+                    (change)="sendSelection('red'); sendTraffic('red')">
+
+                <label class="form-check-label" for="red-light">
+                    Red
+                </label>
+
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioLight" id="yellow-light" value="yellow"
+                    (change)="sendSelection('yellow'); sendTraffic('yellow')">
+
+                <label class="form-check-label" for="yellow-light">
+                    Yellow
+                </label>
+
+            </div>
+
+            <div class="form-check">
+
+                <input class="form-check-input" type="radio" name="flexRadioLight" id="green-light" value="green"
+                    (change)="sendSelection('green'); sendTraffic('green')">
+
+                <label class="form-check-label" for="green-light">
+                    Green
+                </label>
+
+            </div>
+        </div>
+
+        <div class="col-6 p-5">
+            <app-traffic-details [light]="selectedLight"></app-traffic-details>
+        </div>
+    </div>
+</div>

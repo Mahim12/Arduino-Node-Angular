@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="offset-4 col-4 mb-3">
+        <input class="form-control" type="number" #num1 id="num1" name="num1">
+    </div>
+    <div class="offset-4 col-4 mb-3">
+        <input class="form-control" type="number" #num2 id="num2" name="num2">
+    </div>
+    <div class="col-12 text-center">
+        <input class="btn btn-danger" type="submit" (click)="calculate(+num1.value, +num2.value)" name="calculate"
+            id="calculate">
+    </div>
+</div>
+
+
+@if (result <= 9 && result>= 0 ) {
+    <div class="text-center">
+        <p>The result is {{result}}</p>
+    </div>
+
+    }
+    @else {
+    <div class="text-center">
+        <p>The absolute difference should be between the range of 0-9.</p>
+    </div>
+    }
